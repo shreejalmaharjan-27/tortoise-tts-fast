@@ -210,6 +210,7 @@ class TextToSpeech:
         device=None,
         high_vram=False,
         kv_cache=True,
+        use_deepspeed=False,
         ar_checkpoint=None,
         clvp_checkpoint=None,
         diff_checkpoint=None,
@@ -269,7 +270,7 @@ class TextToSpeech:
             )
             ar_path = ar_checkpoint or get_model_path("autoregressive.pth", models_dir)
             self.autoregressive.load_state_dict(torch.load(ar_path))
-            self.autoregressive.post_init_gpt2_config(kv_cache)
+            self.autoregressive.post_init_gpt2_config(use_deepspeed, kv_cache)
 
             diff_path = diff_checkpoint or get_model_path(
                 "diffusion_decoder.pth", models_dir
