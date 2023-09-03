@@ -379,7 +379,7 @@ class UnifiedVoice(nn.Module):
         for module in embeddings:
             module.weight.data.normal_(mean=0.0, std=0.02)
 
-    def post_init_gpt2_config(self, use_deepspeed=True, kv_cache=True, half=False):
+    def post_init_gpt2_config(self, use_deepspeed=False, kv_cache=True, half=False):
         seq_length = self.max_mel_tokens + self.max_text_tokens + 2
         gpt_config = GPT2Config(
             vocab_size=self.max_mel_tokens,

@@ -34,8 +34,10 @@ conda install pytorch==2.0.0 torchvision torchaudio pytorch-cuda=11.7 -c pytorch
 conda install transformers=4.29.2
 pip install -r requirements.txt 
 pip3 install git+https://github.com/152334H/BigVGAN.git
+pip install deepspeed=0.10.2
 ```
 
 If you are on windows, you will also need to install pysoundfile: `conda install -c conda-forge pysoundfile`
+Unfortunately, deepspeed is not supported on Windows (which is ironic because the repo is operated by Microsoft). So to install deepspeed I recommend using WSL. Luckily, WSL is not too painful to setup and integrates pretty well with VS code. 
 
 ### For more information please reference the original tortoise-tts-fast README or original tortoise repo
