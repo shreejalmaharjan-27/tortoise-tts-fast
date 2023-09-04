@@ -25,7 +25,9 @@ All changes in this fork are licensed under the **AGPL**. For avoidance beyond a
 
 ### pure python install
 
-The installation process is identical to the original tortoise-tts repo. Unfortunately, deepspeed is not supported on Windows (which is ironic because the repo is operated by Microsoft). So to install deepspeed I recommend using WSL. Luckily, WSL is not too painful to setup and integrates pretty well with VS code. 
+The installation process is identical to the original tortoise-tts repo.
+
+⚠️ Unfortunately, deepspeed is not supported on Windows (which is ironic because the repo is operated by Microsoft). Luckily, linux with WSL is not too painful to setup and integrates pretty well with VS code. 
 
 ```shell
 conda create --name tortoise python=3.9 numba inflect
