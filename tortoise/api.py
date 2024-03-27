@@ -210,7 +210,7 @@ class TextToSpeech:
         device=None,
         high_vram=False,
         kv_cache=True,
-        use_deepspeed=False,
+        use_deepspeed=True,
         ar_checkpoint=None,
         clvp_checkpoint=None,
         diff_checkpoint=None,
